@@ -1,14 +1,9 @@
-var _ = require('lodash')
-var fs = require('fs')
-var os = require('os')
 
-var user = os.userInfo();
-console.log(user);
-console.log(user.username);
+const express = require('express')
+const app = express()
 
-fs.appendFile('greeting.txt' , 'Hi ' +user.username + ' !' ,()=>{console.log("File is created");
+app.get('/', function (req, res) {
+  res.send('Hello World')
 })
 
-var data = ["person","1",1,4,'#',"person",1]
-var filter = _.uniq(data);
-console.log(filter);
+app.listen(3000)
