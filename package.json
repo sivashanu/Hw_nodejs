@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "node": "^20.16.0"
+    "lodash": "^4.17.21",
+    "node": "^20.16.0",
+    "nodemon": "^3.1.4"
   }
 }

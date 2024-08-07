@@ -1,12 +1,14 @@
-function callback() {
-    console.log('This is a callback function ');
-}
+var _ = require('lodash')
+var fs = require('fs')
+var os = require('os')
 
+var user = os.userInfo();
+console.log(user);
+console.log(user.username);
 
-const add = (a, b, callback) => {
-    var res = a + b;
-    console.log('result is : ' + res);
-    callback();
-}
+fs.appendFile('greeting.txt' , 'Hi ' +user.username + ' !' ,()=>{console.log("File is created");
+})
 
-add(3, 4, callback);
+var data = ["person","1",1,4,'#',"person",1]
+var filter = _.uniq(data);
+console.log(filter);
