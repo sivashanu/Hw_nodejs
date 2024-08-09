@@ -28,6 +28,18 @@ app.post('/person',async (req,res)=>{
   } 
 })
 
+app.get('/person',async (req,res)=>{
+  try{
+    const data = await Person.find();
+    console.log('Data Fetched Successfully');
+    res.status(200).json(data);
+
+  }catch(err){
+    console.log(err);
+    res.status(500).json({error : 'Internal Server error'});
+  }
+})
+
 app.listen(3000,()=>{
   console.log('Listening on port 3000');
 })
