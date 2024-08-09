@@ -6,4 +6,9 @@ app.get('/', function (req, res) {
   res.send('Hello World')
 })
 
+
+app.get('/buddy', function (req, res) {
+  res.send('sure bro i will indroduce to your colleagues !!')
+})
+
 app.listen(3000)
