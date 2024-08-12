@@ -40,6 +40,11 @@ app.get('/person',async (req,res)=>{
   }
 })
 
+
+app.get('/person/:workType',(req,res)=>{
+  const workType = req.params.workType;
+  
+})
 app.listen(3000,()=>{
   console.log('Listening on port 3000');
 })
