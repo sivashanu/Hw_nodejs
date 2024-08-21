@@ -9,6 +9,14 @@ const MenuItem = require('./models/MenuItem');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+//Middleware
+const logrequest = (req,res,next) => {
+  console.log(`[${new Date().toLocaleString()}] Request Made to : ${req.originalUrl}`);
+  next();
+}
+
+app.use(logrequest);
+
 
 app.get('/', function (req, res) {
   res.send('Welcome to my hotel .How can i help you..')
