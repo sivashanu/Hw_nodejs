@@ -28,7 +28,8 @@ app.get('/hello', function (req, res) {
 
 
 
-const personRoutes = require('./routes/personRoutes');
+//const personRoutes = require('./routes/personRoutes');
+const personRoutes = require('C:/Development/Hw_nodejs/Hw_nodejs/routes/personRoutes.js');
 const MenuItemRoutes = require('./routes/menuItemRoutes');
 
 
