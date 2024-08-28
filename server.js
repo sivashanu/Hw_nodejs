@@ -27,6 +27,7 @@ app.get('/', function (req, res) {
 
 const personRoutes = require('./routes/personRoutes');
 const MenuItemRoutes = require('./routes/menuItemRoutes');
+//C:\Development\Hw_nodejs\Hw_nodejs\routes\menuItemRoutes.js
 
 app.use('/person',personRoutes);
 app.use('/menu',MenuItemRoutes);
