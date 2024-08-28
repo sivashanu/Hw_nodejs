@@ -22,6 +22,9 @@ app.get('/', function (req, res) {
   res.send('Welcome to my hotel .How can i help you..')
 })
 
+app.get('/hello', function (req, res) {
+  res.send('Hello Welcome to my hotel .How can i help you..')
+})
 
 
 
